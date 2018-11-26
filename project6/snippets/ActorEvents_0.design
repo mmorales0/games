@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <step comment="false" x="15" y="15">
+        <step comment="false" x="0" y="100">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="40">
+                <if comment="false" x="11" y="125">
                     <group eventID="1" id="-1">
-                        <play-sound4 comment="false" x="37" y="73">
+                        <play-sound4 comment="false" x="22" y="158">
                             <int id="0" val="0"/>
                             <sound eid="47" id="1"/>
                         </play-sound4>
-                        <create-actor3 comment="false" x="37" y="100">
+                        <create-actor3 comment="false" x="22" y="185">
                             <actortype eid="52" id="0"/>
                             <get-xy comment="false" id="1" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
@@ -21,9 +21,9 @@
                             </get-xy>
                             <int id="3" val="0"/>
                         </create-actor3>
-                        <if comment="false" x="37" y="140">
+                        <if comment="false" x="22" y="225">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="178">
+                                <set-dxy comment="false" x="33" y="263">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="100"/>
@@ -36,9 +36,9 @@
                                 <int id="1" val="Right"/>
                             </eq>
                         </if>
-                        <else-if comment="false" x="37" y="217">
+                        <else-if comment="false" x="22" y="302">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="255">
+                                <set-dxy comment="false" x="33" y="340">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="0"/>
                                     <int id="2" val="-100"/>
@@ -51,9 +51,9 @@
                                 <int id="1" val="Left"/>
                             </eq>
                         </else-if>
-                        <else-if comment="false" x="37" y="294">
+                        <else-if comment="false" x="22" y="379">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="332">
+                                <set-dxy comment="false" x="33" y="417">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="1"/>
                                     <int id="2" val="100"/>
@@ -66,9 +66,9 @@
                                 <int id="1" val="Down"/>
                             </eq>
                         </else-if>
-                        <else-if comment="false" x="37" y="371">
+                        <else-if comment="false" x="22" y="456">
                             <group eventID="1" id="-1">
-                                <set-dxy comment="false" x="48" y="409">
+                                <set-dxy comment="false" x="33" y="494">
                                     <ACTOR eid="lastcreated" id="0"/>
                                     <int id="1" val="1"/>
                                     <int id="2" val="-100"/>
@@ -90,7 +90,7 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="10">
+    <group eventID="1" id="1">
         <push-shove comment="false" x="659" y="175">
             <ACTOR eid="lastcreated" id="0"/>
             <int id="1" val="1"/>

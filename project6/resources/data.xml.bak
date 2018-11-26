@@ -18,7 +18,11 @@
         <snippets/>
     </actor>
     <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="18" fixedrot="true" fric="0.2" gid="3" id="50" ignoreg="false" inertia="0.01" ldamp="0.0" mass="100.0" name="Enemy" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="51" static="false">
-        <snippets/>
+        <snippets>
+            <s enabled="true" id="22">
+                <prop id="2147483647" list="0" val="thisactor"/>
+            </s>
+        </snippets>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="53" name="Enemy Bullet" shared="false" width="32">
         <anim across="2" down="2" durations="100,100,100" height="64" id="0" loop="true" name="Animation 0" numframes="3" originx="16" originy="16" sync="false" version="2" width="64">

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="9" fixedrot="false" fric="0.2" gid="3" id="8" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="dgbzvcbzv" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="9" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="16" id="9" name="dgbzvcbzv" shared="false" width="16"/>
     <actor adamp="0.0" ascale="false" atlasID="0" bodytype="2" continuous="false" desc="" eventsnippetid="6" fixedrot="true" fric="0.2" gid="4" id="2" ignoreg="false" inertia="0.01" ldamp="0.0" mass="0.1" name="Enemy" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="3" static="false">
         <snippets>
             <s enabled="true" id="1">

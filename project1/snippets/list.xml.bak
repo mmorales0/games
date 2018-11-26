@@ -110,4 +110,8 @@
             <event displayName="Keyboard" enabled="true" id="14" name="event-key-press-release" order="9" repeats="true"/>
         </events>
     </snippet>
+    <snippet actorid="8" attachedevent="true" class="scripts.ActorEvents_8" classname="scripts.ActorEvents_8" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="9" name="ActorEvents_8" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
+    </snippet>
 </pack>
