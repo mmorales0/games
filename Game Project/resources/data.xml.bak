@@ -69,7 +69,7 @@
                 <prop id="55" list="0" val=""/>
                 <prop id="56" list="0" val="Animation 1"/>
                 <prop id="57" list="0" val=""/>
-                <prop id="58" list="0" val="true"/>
+                <prop id="58" list="0" val="false"/>
                 <prop id="31" list="0" val="up"/>
             </s>
         </snippets>
