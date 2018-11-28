@@ -8,7 +8,7 @@
                         <set-dxy comment="false" x="37" y="73">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
-                            <int id="2" val="10"/>
+                            <int id="2" val="30"/>
                         </set-dxy>
                     </group>
                     <keystate comment="false" id="0" x="0" y="0">
@@ -77,4 +77,23 @@
         </step>
     </group>
     <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-game-val-0 comment="false" x="26" y="40">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-game-val-0>
+                <set-game-val-1 comment="false" x="26" y="73">
+                    <get-xy comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="0"/>
+                    </get-xy>
+                </set-game-val-1>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
 </groups>

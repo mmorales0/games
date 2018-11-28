@@ -4,7 +4,7 @@
         <blocks/>
         <events>
             <event displayName="Actor - Any" enabled="true" id="1" name="collide" order="1" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="false"/>
             <event displayName="After N secs" enabled="true" id="3" name="event-delay" order="3" repeats="true"/>
         </events>
     </snippet>
