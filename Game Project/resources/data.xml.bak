@@ -6,13 +6,13 @@
         <tile collision="0" data="" durations="100" frames="2" id="2" order="-1"/>
         <tile collision="0" data="" durations="100" frames="3" id="3" order="-1"/>
     </tileset>
-    <tileset across="5" atlasID="0" desc="" down="4" id="3" name="clear" oid="-1" shared="false" th="32" tw="32">
-        <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
-        <tile collision="8" data="" durations="100" frames="1" id="1" order="-1"/>
+    <tileset across="5" atlasID="0" desc="" down="5" id="3" name="clear" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="8" data="" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="22" data="" durations="100" frames="1" id="25" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="2" id="2" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="3" id="3" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="4" id="16" order="-1"/>
-        <tile collision="-1" data="" durations="100" frames="5" id="4" order="-1"/>
+        <tile collision="0" data="" durations="100" frames="5" id="4" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="6" id="5" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="7" id="6" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="8" id="7" order="-1"/>
@@ -27,6 +27,14 @@
         <tile collision="-1" data="" durations="100" frames="17" id="14" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="18" id="15" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="19" id="19" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="20" id="20" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="21" id="21" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="22" id="22" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="23" id="23" order="-1"/>
+        <tile collision="-1" data="" durations="100" frames="24" id="24" order="-1"/>
+    </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="7" name="invisible" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="73" id="2" name="jfhjj" shared="false" width="64">
         <anim across="1" down="1" durations="100" height="73" id="0" loop="true" name="Animation 0" numframes="1" originx="32" originy="36" sync="false" version="2" width="64">

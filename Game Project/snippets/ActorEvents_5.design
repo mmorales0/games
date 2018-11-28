@@ -22,14 +22,14 @@
                                     <int id="1" val="1"/>
                                 </get-xy>
                             </minus>
-                            <int id="4" val="-5"/>
+                            <int id="4" val="-10"/>
                         </push-shove>
                     </group>
                     <eq comment="false" id="0" x="0" y="0">
                         <getanim comment="false" id="0" x="0" y="0">
                             <ACTOR eid="this" id="0"/>
                         </getanim>
-                        <int id="1" val="avoid"/>
+                        <int id="1" val="follow"/>
                     </eq>
                 </if>
                 <else comment="false" x="26" y="135">
@@ -51,7 +51,7 @@
                                     <int id="1" val="1"/>
                                 </get-xy>
                             </minus>
-                            <int id="4" val="5"/>
+                            <int id="4" val="10"/>
                         </push-shove>
                     </group>
                 </else>
