@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
     <group eventID="1" id="0">
-        <step comment="false" x="15" y="15">
+        <step comment="false" x="42" y="75">
             <group eventID="1" id="-1">
-                <push-shove comment="false" x="26" y="40">
+                <push-shove comment="false" x="53" y="100">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="0"/>
                     <minus comment="false" id="2" x="0" y="0">
@@ -25,29 +25,9 @@
             </group>
         </step>
     </group>
-    <group eventID="1" id="1">
-        <if comment="false" x="62" y="268">
-            <group eventID="1" id="-1">
-                <push-shove comment="false" x="73" y="306">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                    <minus comment="false" id="2" x="0" y="0">
-                        <get-game-val-0 comment="false" id="0" x="0" y="0"/>
-                        <get-xy comment="false" id="1" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                        </get-xy>
-                    </minus>
-                    <minus comment="false" id="3" x="0" y="0">
-                        <get-game-val-1 comment="false" id="0" x="0" y="0"/>
-                        <get-xy comment="false" id="1" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="1"/>
-                        </get-xy>
-                    </minus>
-                    <int id="4" val="-10"/>
-                </push-shove>
-            </group>
+    <group eventID="1" id="4">
+        <if comment="false" x="84" y="264">
+            <group eventID="1" id="-1"/>
             <eq comment="false" id="0" x="0" y="0">
                 <getanim comment="false" id="0" x="0" y="0">
                     <ACTOR eid="this" id="0"/>
@@ -55,39 +35,6 @@
                 <int id="1" val="follow"/>
             </eq>
         </if>
-        <else comment="false" x="62" y="363">
-            <group eventID="1" id="-1"/>
-        </else>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <step comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="2" id="-1"/>
-                    <less comment="false" id="0" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="0"/>
-                        </get-xy>
-                        <int id="1" val=""/>
-                    </less>
-                </if>
-                <else-if comment="false" x="26" y="110">
-                    <group eventID="2" id="-1"/>
-                    <more comment="false" id="0" x="0" y="0">
-                        <get-xy comment="false" id="0" x="0" y="0">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="4"/>
-                        </get-xy>
-                        <minus comment="false" id="1" x="0" y="0">
-                            <int id="0" val=""/>
-                            <int id="1" val=""/>
-                        </minus>
-                    </more>
-                </else-if>
-            </group>
-        </step>
-    </group>
-    <group eventID="2" id="-1"/>
 </groups>
