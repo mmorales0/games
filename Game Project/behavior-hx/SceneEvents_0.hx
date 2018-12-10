@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,89 +70,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_4_4_Jumping extends ActorScript
+class SceneEvents_0 extends SceneScript
 {
-	public var _JumpKey:String;
-	public var _JumpForce:Float;
-	public var _JumpSound:Sound;
-	public var _JumpRightAnimation:String;
-	public var _JumpLeftAnimation:String;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("Jump Key", "_JumpKey");
-		nameMap.set("Jump Force", "_JumpForce");
-		_JumpForce = 25.0;
-		nameMap.set("Jump Sound", "_JumpSound");
-		nameMap.set("Jump Right Animation", "_JumpRightAnimation");
-		nameMap.set("Jump Left Animation", "_JumpLeftAnimation");
+		super();
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		actor.setActorValue("On Ground?", false);
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				trace("" + actor.getCurrentFrame());
-				/* Jump */
-				if((isKeyPressed(_JumpKey) && (actor.getActorValue("On Ground?") == true)))
-				{
-					playSound(_JumpSound);
-					actor.applyImpulse(0, -1, _JumpForce);
-					/* Give the Actor a chance to get off the ground */
-					runLater(1000 * 0.075, function(timeTask:TimedTask):Void
-					{
-						if(actor.isAlive())
-						{
-							actor.setActorValue("On Ground?", false);
-						}
-					}, actor);
-				}
-				/* Switch to jumping animations */
-				if((actor.getActorValue("On Ground?") == false))
-				{
-					if((actor.getActorValue("Facing Right?") == true))
-					{
-						actor.setAnimation("" + _JumpRightAnimation);
-						actor.setCurrentFrame(Std.int(0));
-					}
-					else
-					{
-						actor.setAnimation("" + _JumpLeftAnimation);
-						actor.setCurrentFrame(Std.int(0));
-					}
-				}
-			}
-		});
-		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				/* Has the Actor collided with the ground? */
-				if(event.thisCollidedWithTile)
-				{
-					for(point in event.points)
-					{
-						if((Math.abs(Math.round(Engine.toPixelUnits(point.normalY))) > 0.1))
-						{
-							actor.setActorValue("On Ground?", true);
-						}
-					}
-				}
-			}
-		});
 		
 	}
 	
