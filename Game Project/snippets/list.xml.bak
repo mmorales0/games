@@ -8,8 +8,8 @@
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="2" name="step" order="3" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="3" name="step" order="5" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="4" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="3" name="step" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_2_2_4WayMovement" classname="scripts.Design_2_2_4WayMovement" desc="Allows the actor to move up, down, left and right." description="Allows the actor to move up, down, left and right." design="true" drawOrder="0" id="2" name="4 Way Movement" oid="-1" package="scripts" shared="false" type="actor">
@@ -75,6 +75,23 @@
             <event displayName="Updated" enabled="true" id="1" name="step" order="2" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
             <event displayName="Actor - Any" enabled="true" id="3" name="event-collide-actor" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="false" class="scripts.Design_6_6_ApplyForce" classname="scripts.Design_6_6_ApplyForce" desc="Apply force to the actor from different directions." description="Apply force to the actor from different directions." design="true" drawOrder="0" id="6" name="Apply Force" oid="-1" package="scripts" shared="false" type="actor">
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Down Control" hidden="false" id="32" name="_DownControl" order="5"/>
+        <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Left Control" hidden="false" id="33" name="_LeftControl" order="6"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Right Control" hidden="false" id="34" name="_RightControl" order="7"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="X" hidden="true" id="35" name="_X" order="1"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Y" hidden="true" id="36" name="_Y" order="2"/>
+        <number default="10.0" defaultValue="10.0" desc="The power of the force to apply." dropdown="" fullname="Force" hidden="false" id="42" name="_Force" order="8"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="Radius" hidden="true" id="43" name="_Radius" order="3"/>
+        <text default="" defaultValue="" desc="Whether the force should be applied gradually or instantly." dropdown="Gradually=Gradually&#10;Instantly=Instantly" fullname="Mode" hidden="false" id="44" name="_Mode" order="9"/>
+        <control default="" defaultValue="" desc="" dropdown="" fullname="Up Control" hidden="false" id="31" name="_UpControl" order="4"/>
+        <blocks/>
+        <events>
+            <event displayName="Updated" enabled="true" id="3" name="step" order="3" repeats="true"/>
+            <event displayName="Drawing" enabled="true" id="4" name="draw" order="4" repeats="true"/>
         </events>
     </snippet>
 </pack>

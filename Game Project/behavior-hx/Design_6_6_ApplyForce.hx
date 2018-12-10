@@ -69,13 +69,37 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_1 extends ActorScript
+class Design_6_6_ApplyForce extends ActorScript
 {
+	public var _DownControl:String;
+	public var _LeftControl:String;
+	public var _RightControl:String;
+	public var _X:Float;
+	public var _Y:Float;
+	public var _Force:Float;
+	public var _Radius:Float;
+	public var _Mode:String;
+	public var _UpControl:String;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
+		nameMap.set("Down Control", "_DownControl");
+		nameMap.set("Actor", "actor");
+		nameMap.set("Left Control", "_LeftControl");
+		nameMap.set("Right Control", "_RightControl");
+		nameMap.set("X", "_X");
+		_X = 0.0;
+		nameMap.set("Y", "_Y");
+		_Y = 0.0;
+		nameMap.set("Force", "_Force");
+		_Force = 10.0;
+		nameMap.set("Radius", "_Radius");
+		_Radius = 0.0;
+		nameMap.set("Mode", "_Mode");
+		_Mode = "";
+		nameMap.set("Up Control", "_UpControl");
 		
 	}
 	
@@ -87,63 +111,39 @@ class ActorEvents_1 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(isKeyDown("right"))
+				_X = asNumber((asNumber(isKeyDown(_RightControl)) - asNumber(isKeyDown(_LeftControl))));
+				propertyChanged("_X", _X);
+				_Y = asNumber((asNumber(isKeyDown(_DownControl)) - asNumber(isKeyDown(_UpControl))));
+				propertyChanged("_Y", _Y);
+				if(!(((_X == 0) && (_Y == 0))))
 				{
-					actor.setXVelocity(30);
-				}
-				else if(isKeyDown("left"))
-				{
-					actor.setXVelocity(-30);
-				}
-				else
-				{
-					actor.setXVelocity(0);
-				}
-				if(isKeyDown("down"))
-				{
-					actor.setYVelocity(30);
-				}
-				else if(isKeyDown("up"))
-				{
-					actor.setYVelocity(-30);
-				}
-				else
-				{
-					actor.setYVelocity(0);
+					if((_Mode == "Gradually"))
+					{
+						actor.push(_X, _Y, _Force);
+					}
+					else if((_Mode == "Instantly"))
+					{
+						actor.applyImpulse(_X, _Y, _Force);
+					}
 				}
 			}
 		});
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ========================= When Drawing ========================= */
+		addWhenDrawingListener(null, function(g:G, x:Float, y:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				Engine.engine.setGameAttribute("MC X", actor.getX());
-				Engine.engine.setGameAttribute("MC Y", actor.getY());
-			}
-		});
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((actor.getX() < 0))
+				if((sceneHasBehavior("Game Debugger") && asBoolean(getValueForScene("Game Debugger", "_Enabled"))))
 				{
-					actor.setX(1);
-				}
-				else if((actor.getX() > ((getSceneWidth()) - (actor.getWidth()))))
-				{
-					actor.setX((((getSceneWidth()) - (actor.getWidth())) - -1));
-				}
-				if((actor.getY() < 0))
-				{
-					actor.setY(1);
-				}
-				else if((actor.getY() > ((getSceneHeight()) - (actor.getHeight()))))
-				{
-					actor.setY((((getSceneHeight()) - (actor.getHeight())) - -1));
+					if(!(((_X == 0) && (_Y == 0))))
+					{
+						g.strokeColor = getValueForScene("Game Debugger", "_CustomColor");
+						g.strokeSize = Std.int(getValueForScene("Game Debugger", "_StrokeThickness"));
+						_Radius = asNumber(Math.sqrt((Math.pow(_X, 2) + Math.pow(_Y, 2))));
+						propertyChanged("_Radius", _Radius);
+						g.drawLine(((actor.getWidth()/2) - (_Force * (_X / _Radius))), ((actor.getHeight()/2) - (_Force * (_Y / _Radius))), (actor.getWidth()/2), (actor.getHeight()/2));
+					}
 				}
 			}
 		});
