@@ -40,7 +40,6 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
-import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -70,18 +69,84 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class SceneEvents_0 extends SceneScript
+class ActorEvents_1 extends ActorScript
 {
 	
 	
-	public function new(dummy:Int, dummy2:Engine)
+	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
-		super();
+		super(actor);
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(isKeyDown("right"))
+				{
+					actor.setXVelocity(30);
+				}
+				else if(isKeyDown("left"))
+				{
+					actor.setXVelocity(-30);
+				}
+				else
+				{
+					actor.setXVelocity(0);
+				}
+				if(isKeyDown("down"))
+				{
+					actor.setYVelocity(30);
+				}
+				else if(isKeyDown("up"))
+				{
+					actor.setYVelocity(-30);
+				}
+				else
+				{
+					actor.setYVelocity(0);
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				Engine.engine.setGameAttribute("MC X", actor.getX());
+				Engine.engine.setGameAttribute("MC Y", actor.getY());
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((actor.getX() < 0))
+				{
+					actor.setX(1);
+				}
+				else if((actor.getX() > ((getSceneWidth()) - (actor.getWidth()))))
+				{
+					actor.setX((((getSceneWidth()) - (actor.getWidth())) - -1));
+				}
+				if((actor.getY() < 0))
+				{
+					actor.setY(1);
+				}
+				else if((actor.getY() > ((getSceneHeight()) - (actor.getHeight()))))
+				{
+					actor.setY((((getSceneHeight()) - (actor.getHeight())) - -1));
+				}
+			}
+		});
 		
 	}
 	
