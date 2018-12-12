@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<scene depth="1" desc="" eventsnippetid="0" extheight="544" extwidth="704" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="0" name="Tutorial1" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="640">
+<scene depth="1" desc="" eventsnippetid="0" extheight="544" extwidth="704" extx="-32" exty="-32" format="3.4.0" gravx="-0.0" gravy="0.0" height="480" id="0" name="Testing Things" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="640">
     <layers>
         <color-bg blue="255" green="255" red="255"/>
         <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="Tutorial" opacity="100" order="1" rid="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
@@ -14,10 +14,10 @@
     </actors>
     <snippets/>
     <terrain>
-        <p pts="4,0.0,0.0,128.0,0.0,128.0,64.0,0.0,64.0" x="64.0" y="32.0"/>
-        <p pts="10,96.0,96.0,96.0,128.0,0.0,128.0,0.0,32.0,32.0,32.0,32.0,0.0,160.0,0.0,160.0,64.0,192.0,64.0,192.0,96.0" x="0.0" y="256.0"/>
-        <p pts="4,128.0,0.0,128.0,64.0,0.0,64.0,0.0,0.0" x="352.0" y="224.0"/>
         <p pts="8,64.0,0.0,64.0,96.0,32.0,96.0,32.0,64.0,0.0,64.0,0.0,32.0,32.0,32.0,32.0,0.0" x="576.0" y="192.0"/>
+        <p pts="4,128.0,0.0,128.0,64.0,0.0,64.0,0.0,0.0" x="352.0" y="224.0"/>
+        <p pts="10,96.0,96.0,96.0,128.0,0.0,128.0,0.0,32.0,32.0,32.0,32.0,0.0,160.0,0.0,160.0,64.0,192.0,64.0,192.0,96.0" x="0.0" y="256.0"/>
+        <p pts="4,0.0,0.0,128.0,0.0,128.0,64.0,0.0,64.0" x="64.0" y="32.0"/>
         <p pts="12,64.0,32.0,64.0,0.0,96.0,0.0,96.0,32.0,160.0,32.0,160.0,64.0,128.0,64.0,128.0,96.0,32.0,96.0,32.0,64.0,0.0,64.0,0.0,32.0" x="480.0" y="384.0"/>
     </terrain>
     <atlases members="" retainAtlases="true"/>

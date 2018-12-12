@@ -3,9 +3,12 @@
     <group eventID="1" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="1" id="-1">
-                <if comment="false" x="26" y="40">
+                <camera-follow comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </camera-follow>
+                <if comment="false" x="26" y="67">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="37" y="73">
+                        <set-dxy comment="false" x="37" y="100">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="30"/>
@@ -16,9 +19,9 @@
                         <control eid="3" id="1"/>
                     </keystate>
                 </if>
-                <else-if comment="false" x="26" y="112">
+                <else-if comment="false" x="26" y="139">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="37" y="145">
+                        <set-dxy comment="false" x="37" y="172">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="-30"/>
@@ -29,18 +32,18 @@
                         <control eid="2" id="1"/>
                     </keystate>
                 </else-if>
-                <else comment="false" x="26" y="184">
+                <else comment="false" x="26" y="211">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="37" y="204">
+                        <set-dxy comment="false" x="37" y="231">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <int id="2" val="0"/>
                         </set-dxy>
                     </group>
                 </else>
-                <if comment="false" x="26" y="243">
+                <if comment="false" x="26" y="270">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="37" y="276">
+                        <set-dxy comment="false" x="37" y="303">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="30"/>
@@ -51,9 +54,9 @@
                         <control eid="1" id="1"/>
                     </keystate>
                 </if>
-                <else-if comment="false" x="26" y="315">
+                <else-if comment="false" x="26" y="342">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="37" y="348">
+                        <set-dxy comment="false" x="37" y="375">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="-30"/>
@@ -64,9 +67,9 @@
                         <control eid="0" id="1"/>
                     </keystate>
                 </else-if>
-                <else comment="false" x="26" y="387">
+                <else comment="false" x="26" y="414">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="37" y="407">
+                        <set-dxy comment="false" x="37" y="434">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="0"/>
@@ -205,4 +208,14 @@
         </step>
     </group>
     <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <camera-follow comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </camera-follow>
+            </group>
+        </init>
+    </group>
+    <group eventID="4" id="-1"/>
 </groups>
