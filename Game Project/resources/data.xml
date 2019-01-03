@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
-    <tileset across="2" atlasID="0" desc="" down="2" id="4" name="bush" oid="-1" shared="false" th="32" tw="32">
+    <tileset across="3" atlasID="0" desc="" down="2" id="10" name="bush" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
         <tile collision="0" data="" durations="100" frames="1" id="1" order="-1"/>
         <tile collision="0" data="" durations="100" frames="2" id="2" order="-1"/>
         <tile collision="0" data="" durations="100" frames="3" id="3" order="-1"/>
+        <tile collision="0" data="" durations="100" frames="4" id="4" order="-1"/>
+        <tile collision="0" data="" durations="100" frames="5" id="5" order="-1"/>
     </tileset>
     <tileset across="5" atlasID="0" desc="" down="5" id="3" name="clear" oid="-1" shared="false" th="32" tw="32">
         <tile collision="8" data="" durations="100" frames="0" id="0" order="-1"/>
