@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_5 extends ActorScript
+class ActorEvents_0 extends ActorScript
 {
 	
 	
@@ -87,31 +87,8 @@ class ActorEvents_5 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				actor.push((Engine.engine.getGameAttribute("MC X") - actor.getX()), (Engine.engine.getGameAttribute("MC Y") - actor.getY()), 7);
-			}
-		});
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((actor.getX() < 0))
-				{
-					actor.setX(1);
-				}
-				else if((actor.getX() > ((getSceneWidth()) - (actor.getWidth()))))
-				{
-					actor.setX((((getSceneWidth()) - (actor.getWidth())) - -1));
-				}
-				if((actor.getY() < 0))
-				{
-					actor.setY(1);
-				}
-				else if((actor.getY() > ((getSceneHeight()) - (actor.getHeight()))))
-				{
-					actor.setY((((getSceneHeight()) - (actor.getHeight())) - -1));
-				}
+				Engine.engine.setGameAttribute("Hero x", actor.getX());
+				Engine.engine.setGameAttribute("Hero Y", actor.getX());
 			}
 		});
 		
