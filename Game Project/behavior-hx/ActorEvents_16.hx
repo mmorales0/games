@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_52 extends ActorScript
+class ActorEvents_16 extends ActorScript
 {
 	
 	
