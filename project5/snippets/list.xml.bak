@@ -5,7 +5,7 @@
         <events>
             <event displayName="Actor - Any" enabled="true" id="1" name="collide" order="1" repeats="true"/>
             <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="false"/>
-            <event displayName="After N secs" enabled="false" id="3" name="event-delay" order="3" repeats="true"/>
+            <event displayName="After N secs" enabled="true" id="3" name="event-delay" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="0" attachedevent="true" class="scripts.ActorEvents_0" classname="scripts.ActorEvents_0" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="13" name="ActorEvents_0" oid="-1" package="scripts." shared="false" type="actor">

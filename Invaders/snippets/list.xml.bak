@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
     <snippet actorid="0" attachedevent="true" class="scripts.ActorEvents_0" classname="scripts.ActorEvents_0" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="0" name="ActorEvents_0" oid="-1" package="scripts." shared="false" type="actor">
-        <number default="20" defaultValue="20" desc="how fast the ship can move." dropdown="" fullname="Ship Speed" hidden="false" id="1" name="_ShipSpeed" order="0"/>
+        <number default="20.0" defaultValue="20.0" desc="how fast the ship can move." dropdown="" fullname="Ship Speed" hidden="false" id="1" name="_ShipSpeed" order="0"/>
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="false"/>

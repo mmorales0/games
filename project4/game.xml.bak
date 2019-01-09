@@ -31,14 +31,14 @@
         <scale enabled="true" name="1x"/>
         <scale enabled="true" name="1.5x"/>
         <scale enabled="true" name="2x"/>
-        <scale enabled="true" name="3x"/>
+        <scale enabled="false" name="3x"/>
         <scale enabled="true" name="4x"/>
     </webScales>
     <desktopScales>
         <scale enabled="true" name="1x"/>
         <scale enabled="true" name="1.5x"/>
         <scale enabled="true" name="2x"/>
-        <scale enabled="true" name="3x"/>
+        <scale enabled="false" name="3x"/>
         <scale enabled="true" name="4x"/>
     </desktopScales>
     <iOSScales>
@@ -60,8 +60,8 @@
     <groups/>
     <cgroups>
         <cgroup g1="0" g2="1"/>
-        <cgroup g1="1" g2="3"/>
         <cgroup g1="0" g2="3"/>
+        <cgroup g1="1" g2="3"/>
         <cgroup g1="3" g2="3"/>
     </cgroups>
     <input>

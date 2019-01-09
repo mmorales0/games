@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="10" id="17" name="Arrow Attack" shared="false" width="34">
+        <anim across="1" down="1" durations="100" height="10" id="0" loop="true" name="AA Right" numframes="1" originx="17" originy="5" sync="false" version="2" width="34">
+            <poly data="4,0,0,34,0,34,10,0,10" density="0.1" fric="0.2" gid="-1000" id="0" name="AA Right" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="11" fixedrot="false" fric="0.2" gid="3" id="20" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Arrow Attack Down" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="21" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="34" id="21" name="Arrow Attack Down" shared="false" width="10">
+        <anim across="1" down="1" durations="100" height="34" id="0" loop="true" name="Animation 0" numframes="1" originx="5" originy="17" sync="false" version="2" width="10">
+            <poly data="4,0,0,10,0,10,34,0,34" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="10" fixedrot="false" fric="0.2" gid="3" id="18" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Arrow Attack Left" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="19" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="10" id="19" name="Arrow Attack Left" shared="false" width="34">
+        <anim across="1" down="1" durations="100" height="10" id="0" loop="true" name="Animation 0" numframes="1" originx="17" originy="5" sync="false" version="2" width="34">
+            <poly data="4,0,0,34,0,34,10,0,10" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="9" fixedrot="false" fric="0.2" gid="3" id="16" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Arrow Attack Right" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="17" static="false">
+        <snippets/>
+    </actor>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="12" fixedrot="false" fric="0.2" gid="3" id="22" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Arrow Attack Up" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="23" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="34" id="23" name="Arrow Attack Up" shared="false" width="10">
+        <anim across="1" down="1" durations="100" height="34" id="0" loop="true" name="Animation 0" numframes="1" originx="5" originy="17" sync="false" version="2" width="10">
+            <poly data="4,0,0,10,0,10,34,0,34" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="7" fixedrot="true" fric="0.2" gid="3" id="12" ignoreg="true" inertia="1.0" ldamp="0.0" mass="1.0" name="BoogieMan" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="13" static="false">
         <snippets/>
     </actor>
@@ -197,6 +229,22 @@
         <tile collision="-1" data="" durations="100" frames="142" id="142" order="-1"/>
         <tile collision="-1" data="" durations="100" frames="143" id="143" order="-1"/>
     </tileset>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="13" fixedrot="false" fric="0.2" gid="3" id="24" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="HP Green" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="25" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="25" name="HP Green" shared="false" width="32">
+        <anim across="4" down="1" durations="100,100,100,100" height="32" id="0" loop="true" name="Animation 0" numframes="4" originx="16" originy="16" sync="false" version="0" width="128">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="14" fixedrot="false" fric="0.2" gid="3" id="26" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="HP Red" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="27" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="27" name="HP Red" shared="false" width="32">
+        <anim across="3" down="2" durations="100,100,100,100,100,100" height="64" id="0" loop="true" name="Animation 0" numframes="6" originx="16" originy="16" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <tileset across="1" atlasID="0" desc="" down="1" id="7" name="invisible" oid="-1" shared="false" th="32" tw="32">
         <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
