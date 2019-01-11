@@ -73,9 +73,9 @@
     <attributes>
         <number cid="-1" id="2" name="health" save="true" value="0.0"/>
         <number cid="-1" id="0" name="MC X" save="true" value="0.0"/>
-        <number cid="-1" id="4" name="Red Potion Strength" save="true" value="50"/>
+        <number cid="-1" id="4" name="Red Potion Strength" save="true" value="50.0"/>
         <number cid="-1" id="1" name="MC Y" save="true" value="0.0"/>
-        <number cid="-1" id="3" name="Green Potion Strength" save="true" value="100"/>
+        <number cid="-1" id="3" name="Green Potion Strength" save="true" value="100.0"/>
     </attributes>
     <collisions>
         <poly id="0" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>

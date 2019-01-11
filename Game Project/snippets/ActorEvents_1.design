@@ -274,10 +274,10 @@
             <group eventID="6" id="-1">
                 <if comment="false" x="26" y="47">
                     <group eventID="6" id="-1">
-                        <die comment="false" x="37" y="87">
+                        <die comment="false" x="37" y="82">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                         </die>
-                        <set-game-val-2 comment="false" x="37" y="119">
+                        <set-game-val-2 comment="false" x="37" y="114">
                             <get-val-1-1 comment="false" id="0" x="0" y="0"/>
                         </set-game-val-2>
                     </group>
@@ -340,11 +340,11 @@
                 </if>
                 <else-if comment="false" x="26" y="191">
                     <group eventID="7" id="-1">
-                        <setanim comment="false" x="37" y="239">
+                        <setanim comment="false" x="37" y="234">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="Right"/>
                         </setanim>
-                        <push-shove comment="false" x="37" y="266">
+                        <push-shove comment="false" x="37" y="261">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="1"/>
@@ -367,13 +367,13 @@
                         </eq>
                     </or>
                 </else-if>
-                <else-if comment="false" x="26" y="305">
+                <else-if comment="false" x="26" y="300">
                     <group eventID="7" id="-1">
-                        <setanim comment="false" x="37" y="353">
+                        <setanim comment="false" x="37" y="343">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="Right"/>
                         </setanim>
-                        <push-shove comment="false" x="37" y="380">
+                        <push-shove comment="false" x="37" y="370">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="1"/>
@@ -396,13 +396,13 @@
                         </eq>
                     </or>
                 </else-if>
-                <else-if comment="false" x="26" y="419">
+                <else-if comment="false" x="26" y="409">
                     <group eventID="7" id="-1">
-                        <setanim comment="false" x="37" y="467">
+                        <setanim comment="false" x="37" y="452">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="Right"/>
                         </setanim>
-                        <push-shove comment="false" x="37" y="494">
+                        <push-shove comment="false" x="37" y="479">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
                             <int id="2" val="1"/>

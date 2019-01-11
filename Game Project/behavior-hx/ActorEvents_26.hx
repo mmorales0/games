@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_14 extends ActorScript
+class ActorEvents_26 extends ActorScript
 {
 	
 	
@@ -81,46 +81,6 @@ class ActorEvents_14 extends ActorScript
 	
 	override public function init()
 	{
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((actor.getX() < 0))
-				{
-					actor.setX(1);
-				}
-				else if((actor.getX() > ((getSceneWidth()) - (actor.getWidth()))))
-				{
-					actor.setX((((getSceneWidth()) - (actor.getWidth())) - -1));
-				}
-				if((actor.getY() < 0))
-				{
-					actor.setY(1);
-				}
-				else if((actor.getY() > ((getSceneHeight()) - (actor.getHeight()))))
-				{
-					actor.setY((((getSceneHeight()) - (actor.getHeight())) - -1));
-				}
-			}
-		});
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((actor.getAnimation() == "avoid"))
-				{
-					actor.push((Engine.engine.getGameAttribute("MC X") - actor.getX()), (Engine.engine.getGameAttribute("MC Y") - actor.getY()), -5);
-				}
-				else
-				{
-					actor.push((Engine.engine.getGameAttribute("MC X") - actor.getX()), (Engine.engine.getGameAttribute("MC Y") - actor.getY()), 5);
-				}
-			}
-		});
 		
 	}
 	
