@@ -80,6 +80,7 @@
         <number cid="-1" id="4" name="Red Potion Strength" save="true" value="50.0"/>
         <number cid="-1" id="1" name="MC Y" save="true" value="0.0"/>
         <number cid="-1" id="3" name="Green Potion Strength" save="true" value="100.0"/>
+        <number cid="-1" id="6" name="EAttack" save="true" value="25.0"/>
     </attributes>
     <collisions>
         <poly id="0" name="Square" pts="0.0,0.0#0.0,1.0#1.0,1.0#1.0,0.0"/>

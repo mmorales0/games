@@ -429,4 +429,44 @@
         </event-key-press-release>
     </group>
     <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <event-collide-actortogroup comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="8" id="-1">
+                        <set-game-val-2 comment="false" x="37" y="77">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                                <get-game-val-6 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                        </set-game-val-2>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                        <get-val-1-1 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <if comment="false" x="26" y="119">
+                    <group eventID="8" id="-1">
+                        <die comment="false" x="37" y="159">
+                            <first-actor comment="false" id="0" x="0" y="0"/>
+                        </die>
+                    </group>
+                    <lesseq comment="false" id="0" x="0" y="0">
+                        <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                        <minus comment="false" id="1" x="0" y="0">
+                            <get-val-1-1 comment="false" id="0" x="0" y="0"/>
+                            <times comment="false" id="1" x="0" y="0">
+                                <int id="0" val="3"/>
+                                <get-game-val-6 comment="false" id="1" x="0" y="0"/>
+                            </times>
+                        </minus>
+                    </lesseq>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actorgroup eid="4" id="1"/>
+        </event-collide-actortogroup>
+    </group>
+    <group eventID="8" id="-1"/>
 </groups>
