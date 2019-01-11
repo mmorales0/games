@@ -5,8 +5,8 @@
             <group eventID="1" id="-1">
                 <draw-text comment="false" x="26" y="40">
                     <get-game-val-2 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="200"/>
-                    <int id="2" val="200"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="50"/>
                 </draw-text>
             </group>
         </draw>

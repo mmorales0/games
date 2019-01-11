@@ -168,4 +168,41 @@
         </step>
     </group>
     <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-collide-actortotype comment="false" x="16" y="15">
+            <group eventID="3" id="-1">
+                <if comment="false" x="27" y="47">
+                    <group eventID="3" id="-1">
+                        <set-game-val-2 comment="false" x="38" y="77">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                                <get-game-val-5 comment="false" id="1" x="0" y="0"/>
+                            </minus>
+                        </set-game-val-2>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                        <get-val-8-1 comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+                <if comment="false" x="27" y="119">
+                    <group eventID="3" id="-1">
+                        <die comment="false" x="38" y="154">
+                            <first-actor comment="false" id="0" x="0" y="0"/>
+                        </die>
+                    </group>
+                    <lesseq comment="false" id="0" x="0" y="0">
+                        <get-game-val-2 comment="false" id="0" x="0" y="0"/>
+                        <minus comment="false" id="1" x="0" y="0">
+                            <get-val-8-2 comment="false" id="0" x="0" y="0"/>
+                            <get-game-val-4 comment="false" id="1" x="0" y="0"/>
+                        </minus>
+                    </lesseq>
+                </if>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="28" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="3" id="-1"/>
 </groups>
