@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_12 extends ActorScript
+class ActorEvents_50 extends ActorScript
 {
 	
 	
@@ -82,12 +82,12 @@ class ActorEvents_12 extends ActorScript
 	override public function init()
 	{
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		/* ======================== Something Else ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				actor.push((Engine.engine.getGameAttribute("MC X") - actor.getX()), (Engine.engine.getGameAttribute("MC Y") - actor.getY()), 5);
+				recycleActor(actor.getLastCollidedActor());
 			}
 		});
 		
@@ -96,24 +96,32 @@ class ActorEvents_12 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if((actor.getX() < 0))
+				if((actor.getAnimation() == "avoid"))
 				{
-					actor.setX(1);
+					actor.applyImpulse((Engine.engine.getGameAttribute("Hero x") - actor.getX()), (Engine.engine.getGameAttribute("Hero Y") - actor.getY()), -5);
 				}
-				else if((actor.getX() > ((getSceneWidth()) - (actor.getWidth()))))
+				else
 				{
-					actor.setX((((getSceneWidth()) - (actor.getWidth())) - -1));
-				}
-				if((actor.getY() < 0))
-				{
-					actor.setY(1);
-				}
-				else if((actor.getY() > ((getSceneHeight()) - (actor.getHeight()))))
-				{
-					actor.setY((((getSceneHeight()) - (actor.getHeight())) - -1));
+					actor.applyImpulse((Engine.engine.getGameAttribute("Hero x") - actor.getX()), (Engine.engine.getGameAttribute("Hero Y") - actor.getY()), 5);
 				}
 			}
 		});
+		
+		/* ======================= After N seconds ======================== */
+		runLater(1000 * 4, function(timeTask:TimedTask):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((actor.getAnimation() == "avoid"))
+				{
+					actor.setAnimation("" + "follow");
+				}
+				else
+				{
+					actor.setAnimation("" + "avoid");
+				}
+			}
+		}, actor);
 		
 	}
 	

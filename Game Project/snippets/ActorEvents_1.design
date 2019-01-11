@@ -224,16 +224,16 @@
         <get-val-1-1 comment="false" x="164" y="166"/>
     </group>
     <group eventID="5" id="0">
-        <event-collide-actortotype comment="false" x="15" y="15">
+        <event-collide-actortotype comment="false" x="61" y="79">
             <group eventID="5" id="-1">
-                <if comment="false" x="26" y="47">
+                <if comment="false" x="72" y="111">
                     <group eventID="5" id="-1">
-                        <die comment="false" x="37" y="82">
+                        <die comment="false" x="83" y="146">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                         </die>
-                        <if comment="false" x="37" y="114">
+                        <if comment="false" x="83" y="178">
                             <group eventID="5" id="-1">
-                                <set-game-val-2 comment="false" x="48" y="149">
+                                <set-game-val-2 comment="false" x="94" y="213">
                                     <plus comment="false" id="0" x="0" y="0">
                                         <get-game-val-2 comment="false" id="0" x="0" y="0"/>
                                         <get-game-val-4 comment="false" id="1" x="0" y="0"/>
@@ -248,9 +248,9 @@
                                 </minus>
                             </lesseq>
                         </if>
-                        <else comment="false" x="37" y="191">
+                        <else comment="false" x="83" y="255">
                             <group eventID="5" id="-1">
-                                <set-game-val-2 comment="false" x="48" y="211">
+                                <set-game-val-2 comment="false" x="94" y="275">
                                     <get-val-1-1 comment="false" id="0" x="0" y="0"/>
                                 </set-game-val-2>
                             </group>
@@ -313,7 +313,7 @@
                     <group eventID="7" id="-1">
                         <setanim comment="false" x="37" y="125">
                             <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="Right"/>
+                            <int id="1" val="AA Right"/>
                         </setanim>
                         <push-shove comment="false" x="37" y="152">
                             <ACTOR eid="lastcreated" id="0"/>
@@ -342,13 +342,13 @@
                     <group eventID="7" id="-1">
                         <setanim comment="false" x="37" y="234">
                             <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="Right"/>
+                            <int id="1" val="AA Up"/>
                         </setanim>
                         <push-shove comment="false" x="37" y="261">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
-                            <int id="2" val="1"/>
-                            <int id="3" val="0"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="-1"/>
                             <int id="4" val="10"/>
                         </push-shove>
                     </group>
@@ -357,13 +357,13 @@
                             <getanim comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getanim>
-                            <int id="1" val="Walking Right"/>
+                            <int id="1" val="Walking Up"/>
                         </eq>
                         <eq comment="false" id="1" x="0" y="0">
                             <getanim comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getanim>
-                            <int id="1" val="Facing Right"/>
+                            <int id="1" val="Facing Up"/>
                         </eq>
                     </or>
                 </else-if>
@@ -371,12 +371,12 @@
                     <group eventID="7" id="-1">
                         <setanim comment="false" x="37" y="343">
                             <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="Right"/>
+                            <int id="1" val="AA Left"/>
                         </setanim>
                         <push-shove comment="false" x="37" y="370">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
-                            <int id="2" val="1"/>
+                            <int id="2" val="-1"/>
                             <int id="3" val="0"/>
                             <int id="4" val="10"/>
                         </push-shove>
@@ -386,13 +386,13 @@
                             <getanim comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getanim>
-                            <int id="1" val="Walking Right"/>
+                            <int id="1" val="Walking Left"/>
                         </eq>
                         <eq comment="false" id="1" x="0" y="0">
                             <getanim comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getanim>
-                            <int id="1" val="Facing Right"/>
+                            <int id="1" val="Facing Left"/>
                         </eq>
                     </or>
                 </else-if>
@@ -400,13 +400,13 @@
                     <group eventID="7" id="-1">
                         <setanim comment="false" x="37" y="452">
                             <ACTOR eid="lastcreated" id="0"/>
-                            <int id="1" val="Right"/>
+                            <int id="1" val="AA Down"/>
                         </setanim>
                         <push-shove comment="false" x="37" y="479">
                             <ACTOR eid="lastcreated" id="0"/>
                             <int id="1" val="1"/>
-                            <int id="2" val="1"/>
-                            <int id="3" val="0"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="1"/>
                             <int id="4" val="10"/>
                         </push-shove>
                     </group>
@@ -415,18 +415,18 @@
                             <getanim comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getanim>
-                            <int id="1" val="Walking Right"/>
+                            <int id="1" val="Walking Down"/>
                         </eq>
                         <eq comment="false" id="1" x="0" y="0">
                             <getanim comment="false" id="0" x="0" y="0">
                                 <ACTOR eid="this" id="0"/>
                             </getanim>
-                            <int id="1" val="Facing Right"/>
+                            <int id="1" val="Facing Down"/>
                         </eq>
                     </or>
                 </else-if>
             </group>
-            <control eid="4" id="0"/>
+            <control eid="6" id="0"/>
             <int id="1" val="0"/>
         </event-key-press-release>
     </group>
