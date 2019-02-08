@@ -122,6 +122,7 @@
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="false"/>
             <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
             <event displayName="Actor - Type" enabled="true" id="3" name="event-collide-actortotype" order="3" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="4" name="event-collide-actortotype" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="24" attachedevent="true" class="scripts.ActorEvents_24" classname="scripts.ActorEvents_24" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="13" name="ActorEvents_24" oid="-1" package="scripts." shared="false" type="actor">

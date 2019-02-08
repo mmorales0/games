@@ -69,24 +69,33 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_14 extends ActorScript
+class ActorEvents_12 extends ActorScript
 {
-	public var _EHealth:Float;
 	public var _MaxHealth:Float;
+	public var _EHealth:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("EHealth", "_EHealth");
-		_EHealth = 50.0;
 		nameMap.set("Max Health", "_MaxHealth");
 		_MaxHealth = 100.0;
+		nameMap.set("EHealth", "_EHealth");
+		_EHealth = 50.0;
 		
 	}
 	
 	override public function init()
 	{
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				actor.push((Engine.engine.getGameAttribute("MC X") - actor.getX()), (Engine.engine.getGameAttribute("MC Y") - actor.getY()), 5);
+			}
+		});
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
@@ -112,22 +121,6 @@ class ActorEvents_14 extends ActorScript
 			}
 		});
 		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((actor.getAnimation() == "avoid"))
-				{
-					actor.push((Engine.engine.getGameAttribute("MC X") - actor.getX()), (Engine.engine.getGameAttribute("MC Y") - actor.getY()), -5);
-				}
-				else
-				{
-					actor.push((Engine.engine.getGameAttribute("MC X") - actor.getX()), (Engine.engine.getGameAttribute("MC Y") - actor.getY()), 5);
-				}
-			}
-		});
-		
 		/* ======================== Actor of Type ========================= */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
@@ -137,7 +130,7 @@ class ActorEvents_14 extends ActorScript
 				{
 					Engine.engine.setGameAttribute("health", (Engine.engine.getGameAttribute("health") - Engine.engine.getGameAttribute("Arrow Strength")));
 				}
-				if((Engine.engine.getGameAttribute("health") <= (_MaxHealth - Engine.engine.getGameAttribute("Red Potion Strength"))))
+				if((Engine.engine.getGameAttribute("health") <= (_MaxHealth - Engine.engine.getGameAttribute("Arrow Strength"))))
 				{
 					recycleActor(event.thisActor);
 				}
